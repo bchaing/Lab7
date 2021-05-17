@@ -40,21 +40,23 @@ router.setState = function (state, back) {
   let heading = document.querySelector("h1");
   let url;
 
+  console.log(history.state);
+
   switch (state.name) {
     case "home":
       body.className = "";
       heading.innerText = "Journal Entries";
-      url = "Lab7/";
+      url = "/";
       break;
     case "settings":
       body.className = "settings";
       heading.innerText = "Settings";
-      url = "Lab7/#settings";
+      url = "/#settings";
       break;
     case "entry":
       body.className = "single-entry";
       heading.innerText = `Entry ${state.entryId}`;
-      url = `Lab7/#entry${state.entryId}`;
+      url = `/#entry${state.entryId}`;
 
       const newEntry = document.createElement("entry-page");
       newEntry.entry = state.entry;
