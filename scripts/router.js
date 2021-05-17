@@ -40,7 +40,7 @@ router.setState = function (state, back) {
   let heading = document.querySelector("h1");
   let url = window.location;
 
-  if ((history.state.name || "home") == state.name && !back) return;
+  // if (name == state.name && !back) return;
 
   switch (state.name) {
     case "home":
