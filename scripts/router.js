@@ -44,16 +44,19 @@ router.setState = function (state, back) {
 
   switch (state.name) {
     case "home":
+      if (body.className === "") return;
       body.className = "";
       heading.innerText = "Journal Entries";
       url = `${url}`;
       break;
     case "settings":
+      if (body.className === "settings") return;
       body.className = "settings";
       heading.innerText = "Settings";
       url = `${url}#settings`;
       break;
     case "entry":
+      if (body.className === "single-entry") return;
       body.className = "single-entry";
       heading.innerText = `Entry ${state.entryId}`;
       url = `${url}#entry${state.entryId}`;
