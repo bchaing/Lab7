@@ -46,17 +46,17 @@ router.setState = function (state, back) {
     case "home":
       body.className = "";
       heading.innerText = "Journal Entries";
-      url = `${url}/`;
+      url = `${url}`;
       break;
     case "settings":
       body.className = "settings";
       heading.innerText = "Settings";
-      url = `${url}/#settings`;
+      url = `${url}#settings`;
       break;
     case "entry":
       body.className = "single-entry";
       heading.innerText = `Entry ${state.entryId}`;
-      url = `${url}/#entry${state.entryId}`;
+      url = `${url}#entry${state.entryId}`;
 
       const newEntry = document.createElement("entry-page");
       newEntry.entry = state.entry;
